@@ -22,7 +22,7 @@ framework: {
 ```javascript
 import monthpicker from 'quasar-monthpicker'
 export default {
-	name: 'periodSelector',
+	name: 'myApp',
 	components: { monthpicker }
 }
 ```
