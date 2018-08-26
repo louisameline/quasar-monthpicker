@@ -66,17 +66,9 @@
 				return this.min ? this.cleanDate(this.min) : null
 			}
 		},
-		created () {
-			// reset the current month frequently in case it changes
-			this.interval = setInterval(() => {
-				this.currentMonth = this.cleanDate()
-			}, 10000)
-		},
 		data () {
 			return {
-				currentMonth: this.cleanDate(),
 				interval: null,
-				// initial value
 				selectedMonth: null
 			}
 		},
@@ -113,8 +105,11 @@
 				d.setHours(0,0,0,0)
 				return d
 			},
-			isCurrentMonth (month) {
-				return this.currentMonth.getTime() === month.getTime()
+			currentMonth () {
+				return this.cleanDate()
+			},
+			isCurrentMonth (month){
+				return this.currentMonth().getTime() === month.getTime()
 			},
 			isDisabled (month) {
 				
@@ -149,7 +144,7 @@
 				handler (val) {
 					this.selectedMonth =  val ?
 						this.cleanDate(val) :
-						this.currentMonth
+						this.currentMonth()
 				},
 				immediate: true
 			}
@@ -187,5 +182,5 @@
 		margin: 4px 0;
 		width: 30%;
 	}
-	
+
 </style>

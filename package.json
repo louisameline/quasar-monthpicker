@@ -1,13 +1,15 @@
 {
 	"name": "quasar-monthpicker",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A month picker for the Quasar Vue.js framework",
 	"keywords": [
-		"vue",
+		"datepicker",
+		"month picker",
+		"monthpicker",
 		"quasar",
 		"quasar-framework",
-		"monthpicker",
-		"month picker"
+		"vue",
+		"vue.js"
 	],
 	"bugs": "https://github.com/louisameline/quasar-monthpicker/issues",
 	"repository": {
