@@ -1,0 +1,21 @@
+{
+	"name": "quasar-monthpicker",
+	"version": "0.1",
+	"description": "A month picker for the Quasar Vue.js framework",
+	"keywords": [
+		"vue",
+		"quasar",
+		"quasar-framework",
+		"monthpicker",
+		"month picker"
+	],
+	"bugs": "https://github.com/louisameline/quasar-monthpicker/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/louisameline/quasar-monthpicker.git"
+	},
+	"homepage": "https://github.com/louisameline/quasar-monthpicker",
+	"author": "Louis Ameline",
+	"license": "MIT",
+	"main": "src/MonthPicker.vue"
+}
