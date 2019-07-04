@@ -172,7 +172,6 @@
 	.monthpicker-months {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 24px;
 		flex-wrap: wrap;
 	}
 	
