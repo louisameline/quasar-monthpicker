@@ -155,7 +155,6 @@
 <style>
 	
 	.monthpicker {
-		margin: 12px auto;
 		width: 250px;
 	}
 	

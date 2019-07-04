@@ -1,6 +1,6 @@
 {
 	"name": "quasar-monthpicker",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "A month picker for the Quasar Vue.js framework",
 	"keywords": [
 		"datepicker",
