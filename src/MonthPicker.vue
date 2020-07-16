@@ -1,5 +1,5 @@
 <template>
-	<div class="monthpicker">
+	<div class="monthpicker" ref="monthpicker">
 		<div class="monthpicker-header">
 			<q-btn
 				@click="changeYear(false)"
@@ -22,7 +22,7 @@
 		<div class="monthpicker-months">
 			<q-btn
 				:class="{ 'monthpicker-current': isCurrentMonth(month) }"
-				@click="selectMonth(month)"
+				@click="monthClick(month)"
 				:color="isSelectedMonth(month) ? color : ''"
 				:disable="isDisabled(month)"
 				:flat="!isSelectedMonth(month)"
@@ -130,6 +130,10 @@
 			},
 			selectMonth (month) {
 				this.$emit('input', month)
+			},
+			monthClick (month) {
+				this.selectMonth(month)
+				if (this.hide) this.$refs.monthpicker.hidden = true
 			}
 		},
 		props: [
@@ -137,7 +141,8 @@
 			'locale',
 			'max',
 			'min',
-			'value'
+			'value',
+			'hide'
 		],
 		watch: {
 			'value': {
