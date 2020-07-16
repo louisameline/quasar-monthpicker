@@ -1,5 +1,5 @@
 <template>
-	<div class="monthpicker">
+	<div class="monthpicker" ref="monthpicker">
 		<div class="monthpicker-header">
 			<q-btn
 				@click="changeYear(false)"
