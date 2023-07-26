@@ -1,6 +1,8 @@
 # quasar-monthpicker
 A month picker for Quasar, the Vue.js framework
 
+Compatible with both Vue 2 and Vue 3
+
 It looks and behaves very much like Quasar's date picker:
 
 ![Screenshot of Quasar MonthPicker](https://louisameline.github.io/quasar-monthpicker/doc/quasar-monthpicker.png)

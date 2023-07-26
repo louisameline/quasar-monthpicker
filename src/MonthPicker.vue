@@ -129,7 +129,9 @@
 					false
 			},
 			selectMonth (month) {
-				this.$emit('input', month)
+        this.selectedMonth = month
+				this.$emit('input', month) //vue2
+        this.$emit('update:modelValue', month) //vue3
 			}
 		},
 		props: [
@@ -137,10 +139,20 @@
 			'locale',
 			'max',
 			'min',
-			'value'
+			'value', //vue2
+      'modelValue' //vue3
 		],
+    emits:['update:modelValue'], //vue3
 		watch: {
-			'value': {
+			'value': { //vue2
+				handler (val) {
+					this.selectedMonth =  val ?
+						this.cleanDate(val) :
+						this.currentMonth()
+				},
+				immediate: true
+			},
+      'modelValue': { // vue3
 				handler (val) {
 					this.selectedMonth =  val ?
 						this.cleanDate(val) :
